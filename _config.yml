@@ -1,0 +1,21 @@
+title:              Rottn Bzkits
+email:              kotaykookies@gmail.com
+description:        A space run by a guy exploring his passions and sharing what he learns along the way
+author:             Tay
+url:                "https://rottnbzkits.github.io"
+baseurl:            ""
+
+# Social Profiles
+facebook_username:  
+
+
+google_analytics:   ""
+
+# Build settings
+markdown:           kramdown
+paginate:           10
+paginate_path:      "/posts/page:num/"
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap

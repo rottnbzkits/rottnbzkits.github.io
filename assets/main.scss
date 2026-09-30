@@ -1,0 +1,221 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "styles";
+
+/* Google Font (Poppins) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Local Fonts (Pyidaungsu) */
+@font-face {
+  font-family: 'Pyidaungsu';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/Pyidaungsu-1.8.3_Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Pyidaungsu';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/Pyidaungsu-1.8.3_Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Pyidaungsu Numbers';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/Pyidaungsu-1.8.3_Numbers.ttf') format('truetype');
+}
+
+/* Global Typography */
+body, 
+.navbar, 
+header.masthead,
+header.masthead .site-heading,
+header.masthead .page-heading,
+header.masthead .post-heading,
+header.masthead h1,
+header.masthead .subheading,
+.post-container,
+.post-content,
+article,
+.post-preview,
+.post-title,
+.post-subtitle,
+footer,
+.btn {
+    font-family: 'Poppins', 'Pyidaungsu', sans-serif !important;
+}
+
+.container,
+.post-container,
+.post-content {
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Poppins', 'Pyidaungsu', sans-serif !important;
+    }
+}
+
+/* Navbar & Logo Styling */
+.navbar-brand {
+    padding-top: 5 !important;
+    padding-bottom: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+}
+
+.navbar-brand .site-logo {
+    max-height: 30px;
+    width: auto;
+    display: block;
+    transition: opacity 0.2s ease-in-out, filter 0.2s ease-in-out;
+}
+
+.navbar-brand:hover .site-logo {
+    opacity: 0.85;
+}
+
+/* Scroll -- Logo will turn to black in Fixed Navbar */
+#mainNav.is-fixed .navbar-brand .site-logo,
+#mainNav.is-visible .navbar-brand .site-logo {
+    filter: brightness(0);
+}
+
+@media only screen and (max-width: 991px) {
+    .navbar-brand .site-logo {
+        height: 40px;
+        filter: brightness(0) !important;
+    }
+}
+
+.navbar-toggler,
+#mainNav .navbar-toggler {
+    text-transform: none !important;   
+    letter-spacing: normal !important;
+    font-weight: 500 !important;
+}
+
+.navbar,
+.navbar-custom,
+.navbar-custom .navbar-nav .nav-item .nav-link,
+#mainNav .navbar-nav .nav-item .nav-link {
+    text-transform: none !important;
+    font-size: 1.05rem !important;
+    letter-spacing: normal !important;
+    font-weight: 400 !important; 
+}
+
+/* Header Masthead */
+header.masthead {
+    margin-bottom: 15px !important;
+}
+
+header.masthead .page-heading, 
+header.masthead .post-heading, 
+header.masthead .site-heading {
+    padding: 200px 0px !important; 
+    min-height: 280px !important;    
+    color: white;
+}
+
+@media only screen and (max-width: 767px) {
+    header.masthead .page-heading, 
+    header.masthead .post-heading, 
+    header.masthead .site-heading {
+        padding: 90px 0 50px !important;
+        min-height: 200px !important;
+    }
+}
+
+header.masthead .page-heading h1,
+header.masthead .site-heading h1 {
+    font-weight: 600 !important; 
+    line-height: 1.5 !important;
+}
+
+header.masthead .subheading {
+    font-size: 1.3em !important;
+    font-weight: 500 !important;  
+    line-height: 1.6 !important;           
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+@media only screen and (max-width: 767px) {
+    header.masthead .subheading {
+        font-size: 1.05rem !important; 
+        line-height: 1.5 !important;
+    }
+}
+
+/* Post Headings & Subtitles Layout */
+.post-title,
+header.masthead .post-heading h1 {
+    line-height: 1.5em !important; 
+}
+
+@media only screen and (max-width: 767px) {
+    .post-title {
+        font-size: 1.5rem !important;    
+        line-height: 1.3em !important;
+    }
+    header.masthead .post-heading h1 {
+        font-size: 1.75rem !important;
+    }
+}
+
+.post-preview > a > .post-subtitle {
+    font-size: 1.05rem !important; 
+    font-weight: 400 !important;
+    line-height: 1.6em !important;
+    color: #6c757d !important;
+    margin-top: 4px;
+    margin-bottom: 20px;
+}
+
+.post-preview {
+    margin-bottom: 40px !important;
+}
+
+/* Hidden Elements */
+header.masthead .post-heading .meta .read-time,
+.post-meta .read-time,
+.read-time,
+.post-preview + hr,
+hr {
+    display: none !important;
+}
+
+/* Minimal Transparent Buttons & Footer */
+.btn-primary,
+.btn {
+    background: none !important;
+    background-color: transparent !important;
+    color: #1d1d28 !important; 
+    border: none !important;
+    box-shadow: none !important;
+    font-size: 0.95rem !important;
+    font-weight: 500 !important;
+    text-transform: none !important;     
+    padding: 8px 16px !important;
+    transition: color 0.2s ease-in-out !important;
+}
+
+.btn-primary:hover, 
+.btn-primary:focus, 
+.btn-primary:active {
+    background: none !important;
+    background-color: transparent !important;
+    color: #0085a1 !important;  
+}
+
+footer .fa-stack .fa-stack-2x {
+    color: #1d1d28 !important;
+}
+
+footer .fa-stack:hover .fa-stack-2x {
+    color: #2b2b3b !important; 
+}
